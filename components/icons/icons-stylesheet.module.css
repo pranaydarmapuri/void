@@ -1,0 +1,5 @@
+.hero_illustration {
+  width: calc(100% + 12% + 2.5%);
+  margin-right: -12%;
+  margin-left: -2.5%;
+}

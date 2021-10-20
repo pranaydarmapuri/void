@@ -1,16 +1,37 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --accent-col-hue: 210;
+  --accent-col-sat: 100%;
+  --accent-col-lyt: 56%;
+  --accent-color: hsl(var(--accent-col-hue) var(--accent-col-sat) var(--accent-col-lyt));
+  --bg-col-hue: 225;
+  --bg-col-sat: 15%;
+  --bg-col-lyt: 5%;
+  --bg-color: hsl(var(--bg-col-hue) var(--bg-col-sat) var(--bg-col-lyt));
+  --fg-col-hue: 0;
+  --fg-col-sat: 0%;
+  --fg-col-lyt: 100%;
+  --fg-color: hsl(var(--fg-col-hue) var(--fg-col-sat) var(--fg-col-lyt));
+  --peach-color-hsl: 0 100% 74%;
+  --peach-color: hsl(var(--peach-color-hsl));
+  --manrope: 'Manrope', sans-serif;
+  --border-radius: 7px;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: var(--manrope);
+  color: rgba(255, 255, 255, 0.8);
 }
+
+html, body {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  font-size: 10px;
+}
+
+body { padding: 36px; }
