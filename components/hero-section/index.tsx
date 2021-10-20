@@ -6,8 +6,8 @@ import Text from './../ui-elements/Text'
 const HeroSection = () => {
   return (
     <div className={css.hero_container}>
-      {/* <IntroSection />
-      <HeroIllustration /> */}
+      <IntroSection />
+      <HeroIllustration />
       <Text.title>Terms & Conditions</Text.title>
       <Text.heading>Terms & Conditions</Text.heading>
       <Text.heading2>Terms & Conditions</Text.heading2>
