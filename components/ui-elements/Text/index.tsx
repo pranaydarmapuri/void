@@ -4,7 +4,8 @@ import css from './text-stylesheet.module.css'
 type textType<E extends ElementType> = {
   children: ReactNode,
   color?: 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'muted',
-  tag?: 'title' | 'heading1' | 'heading2' | 'heading3' | 'heading4' | 'heading5' | 'paragraph' | 'span'
+  type?: 'title' | 'heading1' | 'heading2' | 'heading3' | 'heading4' | 'heading5' | 'paragraph' | 'span' | 'subtitle' | 'caption'
+  _as?: E
 }
 
 type TextProps<E extends ElementType> = textType<E> & Omit<ComponentProps<E>, keyof textType<E>>
@@ -37,7 +38,15 @@ type componentType = {
   paragraph: {
     type: 'p'
     className: string
-  }
+  },
+  subtitle: {
+    type: 'p'
+    className: string
+  },
+  caption: {
+    type: 'span'
+    className: string
+  },
   span: {
     type: 'span'
     className: string
@@ -53,17 +62,21 @@ const Component: componentType = {
   heading5: { type: 'h6', className: css.heading5 },
   paragraph: { type: 'p', className: css.paragraph },
   span: { type: 'span', className: '' },
+  subtitle: { type: 'p', className: css.subtitle },
+  caption: { type: 'span', className: css.caption },
 }
 
 
 const Text = <E extends ElementType = 'span'>({
-  children, color = 'text-primary', tag = 'span', className, ...rest
+  children, color = 'text-primary', type = 'span', _as, className, ...rest
 }: TextProps<E>) => {
 
-  const Tag = Component[tag]
+  const Tag = !!_as ? { type: _as, className: Component[type].className } : Component[type]
+
+  console.log(!!_as)
 
   return (
-    <Tag.type className={`${Component[tag].className} ${css[color]} ${className}`} {...rest}>
+    <Tag.type className={`${Component[type].className} ${css[color]} ${className}`} {...rest}>
       {children}
     </Tag.type >
   )

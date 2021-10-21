@@ -28,6 +28,18 @@
   font-size: clamp(2.1rem, 4.2vw, 4.2rem);
 }
 
+.paragraph {
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+}
+
+.subtitle {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.caption {
+  font-size: clamp(1.2rem, 1.7vw, 1.8rem);
+}
+
 .primary {
   color: var(--accent-color);
 }
@@ -45,7 +57,7 @@
 }
 
 .muted {
-  color:rgba(141, 141, 141, 0.55)
+  color:rgba(141, 141, 141, 0.87)
 }
 
 /* color?: 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'muted', */

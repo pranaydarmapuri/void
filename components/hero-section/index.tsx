@@ -8,20 +8,12 @@ const HeroSection = () => {
     <div className={css.hero_container}>
       <IntroSection />
       <HeroIllustration />
-      <Text color="secondary" tag="heading5">Hello</Text>
-      <Text color="text-secondary" tag="heading5">Hello</Text>
-      <Text color="text-primary" tag="heading5">Hello</Text>
-      <Text color="primary" tag="heading5">Hello</Text>
-      <Text color="text-primary" tag="heading4">Hello</Text>
-      <Text color="text-secondary" tag="heading4">Hello</Text>
-      <Text color="primary" tag="heading4">Hello</Text>
-      <Text color="secondary" tag="heading4">Hello</Text>
-      <Text tag="title">Terms & Conditions</Text>
-      <Text color="text-secondary" tag="title">Terms & Conditions</Text>
-      <Text color="muted" tag="title">Terms & Conditions</Text>
-      <Text color="primary" tag="title">Terms & Conditions</Text>
-      <Text color="secondary" tag="title">Terms & Conditions</Text>
-      <Text tag="title">What we <Text color="primary">do</Text>.</Text>
+      <Text type="title">Terms & Conditions</Text>
+      <Text type="paragraph">What we <Text color="secondary">do</Text>.</Text>
+      <Text type="subtitle">What we <Text color="primary">do</Text>.</Text>
+      <Text type="caption">What we <Text color='muted'>do</Text>.</Text>
+      <Text type="caption">What we <Text color="text-secondary">do</Text>.</Text>
+      <Text color="muted" type="caption">What we do.</Text>
     </div>
   )
 }
