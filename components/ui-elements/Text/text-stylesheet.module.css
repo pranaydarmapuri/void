@@ -41,7 +41,11 @@
 }
 
 .text-secondary {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.muted {
+  color:rgba(141, 141, 141, 0.55)
 }
 
 /* color?: 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'muted', */
