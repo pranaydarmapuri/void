@@ -10,30 +10,38 @@
 
 .heading2 {
   font-weight: 300;
-  font-size: clamp(2.72rem, 6.8vw, 6.8rem);
+  font-size: clamp(3.4rem, 6.8vw, 6.8rem);
 }
 
 .heading3 {
   font-weight: 300;
-  font-size: clamp(2.16rem, 5.4vw, 5.4rem);
+  font-size: clamp(2.7rem, 5.4vw, 5.4rem);
 }
 
 .heading4 {
   font-weight: 300;
-  font-size: clamp(1.92rem, 4.8vw, 4.8rem);
+  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
 }
 
 .heading5 {
   font-weight: 500;
-  font-size: clamp(1.8rem, 4.2vw, 4.2rem);
+  font-size: clamp(2.1rem, 4.2vw, 4.2rem);
 }
 
-.text_primary {
-  font: inherit;
+.primary {
   color: var(--accent-color);
 }
 
-.text_secondary {
-  font: inherit;
+.secondary {
   color: var(--peach-color);
 }
+
+.text-primary {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.text-secondary {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* color?: 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'muted', */
