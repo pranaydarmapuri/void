@@ -17,6 +17,7 @@
   --peach-color: hsl(var(--peach-color-hsl));
   --manrope: 'Manrope', sans-serif;
   --border-radius: 7px;
+  --body-padding: clamp(3.2rem, 6vw, 6rem);
 }
 
 * {
@@ -34,7 +35,16 @@ html, body {
   font-size: 10px;
 }
 
-body { padding: 36px; }
+body {
+  display: grid;
+  place-items: center;
+}
+
+#__next {
+  width: 100vw;
+  max-width: 144rem;
+  padding: var(--body-padding);
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;

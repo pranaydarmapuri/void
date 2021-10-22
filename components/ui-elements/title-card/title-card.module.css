@@ -1,0 +1,15 @@
+.title_card {
+  --bg-col-sat: 20%;
+  --bg-col-lyt: 10%;
+  padding: clamp(2.8rem, 12vw, 12rem) 0;
+  position: relative;
+  isolation: isolate;
+}
+
+.title_card::before {
+  content: '';
+  position: absolute;
+  inset: 0 -250%;
+  background-color: hsl(var(--bg-col-hue) var(--bg-col-sat) var(--bg-col-lyt));
+  z-index: -1;
+}
