@@ -1,0 +1,25 @@
+.card {
+  --bg-col-sat: 20%;
+  --bg-col-lyt: 10%;
+  --padding: clamp(2rem, 3.6vw, 3.6rem);
+  padding: var(--padding);
+  background-color: hsl(var(--bg-col-hue) var(--bg-col-sat) var(--bg-col-lyt));
+}
+
+.stretched {
+  --padding-block: clamp(2.8rem, 10vw, 10rem);
+  padding: var(--padding-block) 0;
+  padding-top: calc(var(--padding-block) - var(--desktop-nav-height));
+  position: relative;
+  isolation: isolate;
+  background-color: transparent;
+}
+
+.stretched::before {
+  content: '';
+  position: absolute;
+  inset: 0 -250%;
+  top: calc(-1 * var(--body-padding));
+  background-color: hsl(var(--bg-col-hue) var(--bg-col-sat) var(--bg-col-lyt));
+  z-index: -1;
+}

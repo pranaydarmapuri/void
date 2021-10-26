@@ -18,6 +18,7 @@
   --manrope: 'Manrope', sans-serif;
   --border-radius: 7px;
   --body-padding: clamp(3.2rem, 6vw, 6rem);
+  --desktop-nav-height: 8rem;
 }
 
 * {
@@ -26,6 +27,12 @@
   box-sizing: border-box;
   font-family: var(--manrope);
   color: rgba(255, 255, 255, 0.8);
+  scroll-behavior: smooth !important;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 html, body {
@@ -35,17 +42,37 @@ html, body {
   font-size: 10px;
 }
 
+
+
 body {
+  --scrollbar-size: 0.5vw;
   display: grid;
   place-items: center;
+}
+
+body::-webkit-scrollbar, body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-track {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+  border-radius: 1vh;
+  -webkit-border-radius: 1vh;
+  -moz-border-radius: 1vh;
+  -ms-border-radius: 1vh;
+  -o-border-radius: 1vh;
+}
+body::-webkit-scrollbar-thumb {
+  --bg-col-lyt: 30%;
+  --bg-col-sat: 25%;
+  background-color:hsl(var(--bg-col-hue) var(--bg-col-sat) var(--bg-col-lyt));
+}
+body::-webkit-scrollbar-track {
+  --bg-col-lyt: 20%;
+  --bg-col-lyt: 15%;
+  background-color: hsl(var(--bg-col-hue) var(--bg-col-sat) var(--bg-col-lyt));
+  margin-block: 15vh;
 }
 
 #__next {
   width: 100vw;
   max-width: 144rem;
   padding: var(--body-padding);
-}
-
-h1,h2,h3,h4,h5,h6 {
-  font-weight: normal;
 }

@@ -60,4 +60,32 @@
   color:rgba(141, 141, 141, 0.87)
 }
 
+.w1 {
+  font-weight: 100;
+}
+.w2 {
+  font-weight: 200;
+}
+.w3 {
+  font-weight: 300;
+}
+.w4 {
+  font-weight: 400;
+}
+.w5 {
+  font-weight: 500;
+}
+.w6 {
+  font-weight: 600;
+}
+.w7 {
+  font-weight: 700;
+}
+.w8 {
+  font-weight: 800;
+}
+.w9 {
+  font-weight: 900;
+}
+
 /* color?: 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'muted', */

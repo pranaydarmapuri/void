@@ -1,15 +1,17 @@
+
+
 .desktop_header {
   width: 100%;
   display: grid;
   place-items: center;
   position: fixed;
   inset: 0 0 auto;
-  background-color: rgba(169, 169, 169, 0.062);
+  z-index: 99;
 }
 
 .desktop_header > nav {
   width: 100vw;
-  min-height: 7rem;
+  min-height: var(--desktop-nav-height);
   max-width: 144rem;
   padding: 0 var(--body-padding);
   display: flex;
@@ -17,10 +19,19 @@
   justify-content: space-between;
 }
 
-.desktop_header > nav > ul {
+.links {
   width: 45%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
+}
+
+.links a {
+  text-decoration: none !important;
+}
+
+.desktop_header__fix {
+  width: 100%;
+  height: var(--desktop-nav-height);
 }

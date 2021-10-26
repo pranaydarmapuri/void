@@ -1,14 +1,14 @@
 import { NextPage } from "next"
-import Text from "../../components/ui-elements/Text"
-import TitleCard from "../../components/ui-elements/title-card"
+import Text from "../../components/ui-elements/typography"
+import Card from "../../components/ui-elements/card"
 import css from './policy-stylesheet.module.css'
 
 const Policy: NextPage = () => {
   return (
     <>
-      <TitleCard>
+      <Card stretched>
         <Text type="title" >Privacy policy</Text>
-      </TitleCard>
+      </Card>
       <main>
         <article className={css.para} >
           <Text type="paragraph" color="muted" >What information does VOID collect?</Text>

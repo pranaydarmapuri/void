@@ -4,7 +4,8 @@ import css from './text-stylesheet.module.css'
 type textType<E extends ElementType> = {
   children: ReactNode,
   color?: 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'muted',
-  type?: 'title' | 'heading1' | 'heading2' | 'heading3' | 'heading4' | 'heading5' | 'paragraph' | 'span' | 'subtitle' | 'caption'
+  type?: 'title' | 'heading1' | 'heading2' | 'heading3' | 'heading4' | 'heading5' | 'paragraph' | 'span' | 'subtitle' | 'caption',
+  weight?: 'w1' | 'w2' | 'w3' | 'w4' | 'w5' | 'w6' | 'w7' | 'w8' | 'w9',
   _as?: E
 }
 
@@ -68,15 +69,15 @@ const Component: componentType = {
 
 
 const Text = <E extends ElementType = 'span'>({
-  children, color = 'text-primary', type = 'span', _as, className, ...rest
+  children, color = 'text-primary', type = 'span', _as, weight, className, ...rest
 }: TextProps<E>) => {
 
   const Tag = !!_as ? { type: _as, className: Component[type].className } : Component[type]
 
-  console.log(!!_as)
+  const fontWeight = !!weight ? css[weight] : ''
 
   return (
-    <Tag.type className={`${Component[type].className} ${css[color]} ${className}`} {...rest}>
+    <Tag.type className={`${Component[type].className} ${css[color]} ${fontWeight} ${className}`} {...rest}>
       {children}
     </Tag.type >
   )

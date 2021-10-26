@@ -1,0 +1,7 @@
+
+.container {
+  margin-block: calc(2 * var(--padding));
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}

@@ -1,34 +1,37 @@
 .container {
-  border-radius: var(--border-radius);
-  -webkit-border-radius: var(--border-radius);
-  -moz-border-radius: var(--border-radius);
-  -ms-border-radius: var(--border-radius);
-  -o-border-radius: var(--border-radius);
+  margin-top: clamp(.15rem, 1.5vw, 7rem);
 }
 
-.container h3 {
-  font-size: 2rem;
-  font-weight: 200;
-}
-
-.container ul {
+.services {
   display: flex;
   flex-direction: column;
-  list-style-type: none;
 }
 
-.container ul > li { font-size: 2rem; }
-
-.container ul > li:first-child { color: var(--accent-color); }
-
-.container ul > li > h1 { 
-  font-weight: 500;
-  line-height: 1; 
+.intro_container {
+  margin-top: clamp(1.8rem, 1.5vw, 7rem);
 }
 
-.container > div {
-  margin-top: 2.5rem;
+.intro_container > * {
+  margin-bottom: clamp(2rem, 3.6vw, 3.6rem);
 }
-.container > div > p {
-  font-size: 1.2rem;
+
+@media only screen and (min-width: 360px) { 
+  .services {
+    flex-direction: row;
+  }
+  .services > *:first-child {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1080px) { 
+  .services {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1280px) { 
+  .services {
+    flex-direction: row;
+  }
 }

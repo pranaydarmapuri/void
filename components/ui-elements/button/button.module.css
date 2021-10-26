@@ -1,0 +1,18 @@
+.button {
+  --padding: clamp(.7rem, 1.25vw, 1.25rem);
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  padding: var(--padding) calc(2 * var(--padding));
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 7.5% / 28%;
+  -webkit-border-radius: 7.5% / 28%;
+  -moz-border-radius: 7.5% / 28%;
+  -ms-border-radius: 7.5% / 28%;
+  -o-border-radius: 7.5% / 28%;
+}
+
+.button.primary {
+  background-color: var(--accent-color);
+}
