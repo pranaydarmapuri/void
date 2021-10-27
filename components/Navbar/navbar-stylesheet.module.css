@@ -17,10 +17,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: background .3s ease-in;
+  -webkit-transition: background .3s ease-in;
+  -moz-transition: background .3s ease-in;
+  -ms-transition: background .3s ease-in;
+  -o-transition: background .3s ease-in;
+}
+
+.desktop_header_with_bg {
+  --bg-col-sat: 20%;
+  --bg-col-lyt: 10%;
+  background-color: hsl(var(--bg-col-hue) var(--bg-col-sat) var(--bg-col-lyt));
 }
 
 .links {
-  width: 45%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,4 +45,10 @@
 .desktop_header__fix {
   width: 100%;
   height: var(--desktop-nav-height);
+}
+
+@media only screen and (min-width: 720px) { 
+  .links {
+    width: 45%;
+  }
 }

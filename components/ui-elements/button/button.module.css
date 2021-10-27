@@ -1,5 +1,5 @@
 .button {
-  --padding: clamp(.7rem, 1.25vw, 1.25rem);
+  --padding: clamp(.8rem, 1.25vw, 1.25rem);
   font-size: clamp(1.4rem, 2.2vw, 2.2rem);
   padding: var(--padding) calc(2 * var(--padding));
   outline: none;

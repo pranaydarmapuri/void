@@ -23,15 +23,3 @@
     margin-right: 2rem;
   }
 }
-
-@media only screen and (min-width: 1080px) { 
-  .services {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 1280px) { 
-  .services {
-    flex-direction: row;
-  }
-}

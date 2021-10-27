@@ -2,8 +2,13 @@ import { NextPage } from "next"
 import Text from "../../components/ui-elements/typography"
 import Card from "../../components/ui-elements/card"
 import css from './policy-stylesheet.module.css'
+import { useContext } from "react"
+import { NavbarContext } from "../../context/NavbarContext"
 
 const Policy: NextPage = () => {
+
+  useContext(NavbarContext).setBG(true)
+
   return (
     <>
       <Card stretched>
