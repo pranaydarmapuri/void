@@ -1,19 +1,20 @@
 .project_card {
+  --img-width: clamp(10rem, 38.5vw, 40rem);
   padding-block: clamp(1.2rem, 2.4rem, 3.6rem);
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: var(--img-width) auto;
   grid-template-areas: "img info";
-  gap: clamp(3.2rem, 11vh, 11.6rem);
+  gap: clamp(1.2rem, 11vh, 11.6rem);
 }
 .project_card:nth-of-type(2n + 1) {
-  grid-template-columns: 4fr 2fr;
+  grid-template-columns: auto var(--img-width);
   grid-template-areas: "info img";
 }
 
 .project_img {
   grid-area: img;
   width: 100%;
-  height: 60rem;
+  aspect-ratio: 9 / 15;
   background-position: center;
   background-size: cover;
 }
