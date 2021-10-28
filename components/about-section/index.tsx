@@ -1,5 +1,5 @@
 import Button from "../ui-elements/button"
-import Card from "../ui-elements/card"
+import { Card } from "../ui-elements/card"
 import Text from "../ui-elements/typography"
 import css from './about-section.module.css'
 

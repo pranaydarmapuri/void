@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/link-passhref */
 
+import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { ComponentProps, useContext, useRef } from 'react'
 import { NavbarContext } from '../../context/NavbarContext'
@@ -14,27 +16,37 @@ const Navbar = () => {
 
   const { isBG } = useContext(NavbarContext)
 
+  const router = useRouter()
+
   return (
     <>
       <header className={`${css.desktop_header} ${(isBG || addBG) && css.desktop_header_with_bg}`}>
         <nav>
           <Link href="/">
-            <Text type="heading5" color="primary" style={{ fontWeight: 600, textDecoration: 'none' }}>
+            <Text type="heading5" color="primary" style={{ fontWeight: 600, textDecoration: 'none', cursor: 'pointer' }}>
               <Text color="secondary">V</Text>OID
             </Text>
           </Link>
           <ul className={css.links}>
             <li>
-              <Text _as="a" type="caption"><Link href="/">Home</Link></Text>
+              <Text type="caption" color={router.pathname == '/' ? 'primary' : 'text-secondary'}>
+                <Link href="/">Home</Link>
+              </Text>
             </li>
             <li>
-              <Text _as="a" type="caption"><Link href="/about" >About</Link></Text>
+              <Text type="caption" color={router.pathname == '/about' ? 'primary' : 'text-secondary'}>
+                <Link href="/about" >About</Link>
+              </Text>
             </li>
             <li>
-              <Text _as="a" type="caption"><Link href="/service" >Services</Link></Text>
+              <Text type="caption" color={router.pathname == '/services' ? 'primary' : 'text-secondary'}>
+                <Link href="/services" >Services</Link>
+              </Text>
             </li>
             <li>
-              <Text _as="a" type="caption"><Link href="/contact" >Contact</Link></Text>
+              <Text type="caption" color={router.pathname == '/contact' ? 'primary' : 'text-secondary'}>
+                <Link href="/contact" >Contact</Link>
+              </Text>
             </li>
           </ul>
         </nav>

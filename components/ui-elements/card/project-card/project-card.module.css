@@ -1,0 +1,46 @@
+.project_card {
+  padding-block: clamp(1.2rem, 2.4rem, 3.6rem);
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-areas: "img info";
+  gap: clamp(3.2rem, 11vh, 11.6rem);
+}
+.project_card:nth-of-type(2n + 1) {
+  grid-template-columns: 4fr 2fr;
+  grid-template-areas: "info img";
+}
+
+.project_img {
+  grid-area: img;
+  width: 100%;
+  height: 60rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.project_info {
+  grid-area: info;
+  margin: auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.2rem, 2.4rem, 3.6rem);
+}
+
+.technologies {
+  --bg-col-lyt: 15%;
+  --bg-col-sat: 20%;
+  --padding: clamp(1.2rem, 1.7vw, 1.8rem);
+  padding: calc(var(--padding) / 2) var(--padding);
+  display: inline-block;
+  background-color: hsl(var(--bg-col-hue), var(--bg-col-sat), var(--bg-col-lyt));
+}
+
+.technologies > *::before {
+  content: '/';
+  padding: 0 1ch;
+  color: var(--accent-color);
+}
+
+.technologies > *:first-child::before {
+  content: none;
+}

@@ -1,4 +1,5 @@
 import { ComponentProps, ReactNode } from "react"
+import ProjectCard from "./project-card"
 import css from './card.module.css'
 
 
@@ -13,4 +14,4 @@ const Card = ({ children, stretched, className, ...rest }: TitleCardProps) => (
   </div>
 )
 
-export default Card
+export { Card, ProjectCard }

@@ -8,7 +8,7 @@
 }
 
 .intro_container {
-  margin-top: clamp(1.8rem, 1.5vw, 7rem);
+  margin-top: clamp(1.8rem, 1.5vw, 9rem);
 }
 
 .intro_container > * {
@@ -20,6 +20,6 @@
     flex-direction: row;
   }
   .services > *:first-child {
-    margin-right: 2rem;
+    margin-right: 3rem;
   }
 }
