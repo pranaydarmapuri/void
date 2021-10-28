@@ -11,7 +11,7 @@ const Policy: NextPage = () => {
 
   return (
     <>
-      <Card stretched>
+      <Card stretched className="title-card">
         <Text type="title" >Privacy policy</Text>
       </Card>
       <main>

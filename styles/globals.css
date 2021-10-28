@@ -75,4 +75,14 @@ body::-webkit-scrollbar-track {
   width: 100vw;
   max-width: 144rem;
   padding: var(--body-padding);
+  padding-bottom: 0;
+}
+
+.title-card.title-card {
+  --padding-block: clamp(2.8rem, 10vw, 10rem);
+  padding: var(--padding-block) 0 !important;
+  padding-top: calc(var(--padding-block) - var(--desktop-nav-height)) !important;
+}
+.title-card::before {
+  top: calc(-1 * var(--body-padding)) !important;
 }

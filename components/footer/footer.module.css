@@ -1,0 +1,32 @@
+.footer_card {
+  margin-top: clamp(2.7rem, 5.4vw, 5.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terms_section {
+  --padding: 3.5rem;
+  position: relative;
+  padding: var(--padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  isolation: isolate;
+}
+.terms_section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: calc(var(--padding) * 0.8) auto;
+  display: block;
+  width: 0.2rem;
+  background-color: rgba(187, 187, 187, 0.3);
+}
+.terms_section > * {
+  text-decoration: none;
+}
+
+.terms_section > *:first-child {
+  text-align: right;
+}
